@@ -1,0 +1,33 @@
+.guide-button {
+  height: 50px;
+  min-width: 75px;
+  background-color: #3f51b5;
+  color: white;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.info-button {
+  height: 30px;
+  min-width: 38px;
+  color: white;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.heads {
+  background-color: red;
+}
+
+.tails {
+  background-color: #3f51b5;;
+}
+
+.bonus {
+  background-color: pink;
+}
+
+.tiny-label {
+  text-align: center;
+  font-size: 10px;
+}

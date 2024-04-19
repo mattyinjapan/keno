@@ -1,0 +1,29 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-gap: 3px;
+  width: 700px;
+}
+
+.card {
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  height: 10px;
+  width: 30px;
+}
+
+.drawn {
+  background-color: white;
+  color: black;
+}
+
+.not-drawn {
+  background-color: grey;
+  color: grey;
+}
+
+.match {
+  border: 2px solid yellow;
+  width: 54px;
+}

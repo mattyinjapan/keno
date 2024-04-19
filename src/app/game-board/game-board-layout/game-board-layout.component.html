@@ -1,0 +1,13 @@
+<div class="grid-container" *ngIf="ticketNumbers.length > 0">
+  <div
+    *ngFor="let number of ticketNumbers; let i = index"
+    [ngClass]="{ match: number.selectFlag && number.drawn }"
+  >
+    <div
+      [ngClass]="{ drawn: number.drawn, 'not-drawn': !number.drawn }"
+      class="card"
+    >
+      {{ number.displayNumber }}
+    </div>
+  </div>
+</div>

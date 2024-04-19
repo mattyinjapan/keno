@@ -1,0 +1,31 @@
+<div class="row-container">
+  <logo></logo>
+  <div class="row-container">
+    <div class="row-container">
+      <div>
+        <div class="tiny-label">Heads</div>
+        <button class="info-button heads">{{ _headsCount }}</button>
+      </div>
+      <div>
+        <div class="tiny-label">Tails</div>
+        <button class="info-button tails">{{ _tailsCount }}</button>
+      </div>
+      <div>
+        <div class="tiny-label">bonus</div>
+        <button class="info-button bonus"></button>
+      </div>
+    </div>
+
+    <button *ngIf="gameInProgress" class="guide-button">NEXT GAME</button>
+    <button *ngIf="gameInProgress" class="guide-button">DRAWING GAME</button>
+    <button
+      *ngIf="!gameInProgress"
+      class="guide-button"
+      [ngStyle]="{ 'background-color': canStartGame ? '#3f51b5' : 'grey' }"
+      (click)="startGame()"
+      [disabled]="!canStartGame || gameInProgress"
+    >
+      START GAME
+    </button>
+  </div>
+</div>

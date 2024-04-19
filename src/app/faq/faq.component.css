@@ -1,0 +1,15 @@
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px; /* Adjust the border-radius to change the roundness */
+  background-color: #e044e0; /* Green background color */
+  color: white; /* Text color */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  width: 400px;
+}

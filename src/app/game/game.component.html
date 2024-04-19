@@ -1,0 +1,17 @@
+<header-layout
+  [startGameEvent]="startGameEvent"
+  [headsCount]="headsCount"
+  [tailsCount]="tailsCount"
+  (startDrawEvent)="handleStartDrawEvent()"
+></header-layout>
+<game-board-layout
+  [ticketNumbers]="ticketNumbers"
+  (gameEndedEvent)="handleGameEndedEvent()"
+  (headsCountEvent)="handleHeadsCountEvent($event)"
+  (tailsCountEvent)="handleTailsCountEvent($event)"
+></game-board-layout>
+<create-ticket
+  [gameInProgress]="gameInProgress"
+  (enableStartDrawButtonEvent)="handleEnableStartDrawButtonEvent($event)"
+></create-ticket>
+<faq></faq>

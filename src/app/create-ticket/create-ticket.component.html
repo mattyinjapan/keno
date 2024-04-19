@@ -1,0 +1,26 @@
+<div>
+  <button
+    *ngIf="!showTicketNumbers"
+    class="create-button"
+    (click)="createTicket()"
+  >
+    Create Ticket
+  </button>
+  <div *ngIf="showTicketNumbers && !gameInProgress">
+    <p class="information">Select {{(selectableBallCount - selectedBalls)}} more balls to enter the draw!</p>
+  </div>
+  <div *ngIf="gameInProgress"> Game in Progress !</div>
+
+  <div *ngIf="showTicketNumbers" class="row-container">
+    <div
+      *ngFor="let number of ticketNumbers; let i = index"
+      class="ball"
+      [ngStyle]="{ 'background-color': number.selectFlag ? 'yellow' : 'black' }"
+      (click)="handleSelect(i)"
+    >
+      <div [ngStyle]="{ color: number.selectFlag ? 'black' : 'white' }">
+        {{ number.displayNumber }}
+      </div>
+    </div>
+  </div>
+</div>
